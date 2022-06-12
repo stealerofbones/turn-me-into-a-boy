@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Turn Me Into A Boy!</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="75091007-13ad-4563-9794-70c629d9c0ef" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_1.jpg" style="object-position:center 59.94999999999999%"/><h1 class="page-title">Turn Me Into A Boy!</h1></header><div class="page-body"><h1 id="f07248f0-1247-47fa-91f5-0b2a4e25ce04" class=""><strong>Ready to do this?</strong></h1><figure id="9d992707-b312-4769-aad6-09d4a0c8aead" class="block-color-gray_background link-to-page"><a href="Turn%20Me%20Into%20A%20Boy!%207509100713ad4563979470c629d9c0ef/Turn%20me%20into%20a%20boy!%209d992707b3124769aad609d4a0c8aead.html">Turn me into a boy!</a></figure><h1 id="19e2b3a5-a605-44b0-a054-3a9f5e168cbc" class=""><strong>Common objections</strong></h1><p id="0ea2037b-1a8a-42b0-8bb3-fd4bdceee6c5" class="">Perhaps you hadn&#x27;t realized that you even <em>could</em> be a boy. Maybe you don&#x27;t feel like one quite yet. Or maybe you even feel like you&#x27;re not good enough to be a boy.</p><p id="062cb48f-3c12-496c-80e2-578d1e5829eb" class=""><em>Don&#x27;t worry about it too much!</em> It is natural to have reservations about this. Here are some frequent newbie objections you may have:</p><p id="af7829bd-f416-4629-8d95-5bdb2752efc6" class="">
+</p><p id="28b1cffc-ef59-4e27-88ae-d89140e9ee94" class=""><strong><strong>But I don’t feel like a man! </strong></strong>That’s OK, and it doesn’t change the fact that you could be a man inside. It’s totally normal not to feel like a man all the time. If you feel depressed or anxious because you don’t feel like a man but you wish you did, that feeling is called gender dysphoria, and we have some resources to help you manage this feeling below.</p><p id="4507e012-748a-4f45-a5cc-74a0170e10b4" class=""><strong>
+But just because I want to be a man doesn’t mean that I actually can be one! </strong>As a fundamental truth, we hold that only you can truly know what your gender is, and what it means to you. Other people can assume based on their standards, but you hold the final say on your own gender. This means that nobody but you can truly determine whether you’re a man, a woman, or anything else. If there’s any part of you that wants to be a man, that could mean that you’re not comfortable with the gender you were assigned at birth. Please take a while to sit with that feeling and learn what it’s trying to tell you. Be what you wish you could be.</p><p id="2863ea07-1e19-437c-a4e6-cc8281c692c3" class=""><strong>
+But I’m too old to be a man! </strong>Nobody’s too old to transition into a man’s life. People at the ages of 8, 28, and 80 have transitioned to live successful, fulfilling lives as men. The best time to start would have been when you were younger, but the second best time is today. You owe this to yourself no matter where and when you start from.</p><p id="f6c20293-647d-4c39-bc59-d5352e57a341" class=""><strong>
+But else nobody will ever see me as a man! I’ll never pass! </strong>Looking like a man according to society&#x27;s standards is a skill that you can learn and practice. You’ll get better at learning what works for you and what doesn’t. Until you get the hang of it, focus on yourself! Just start with what makes you feel comfortable. Presenting masculine is hard even for cis men to learn!</p><p id="4e6fe9fa-ce6c-4d40-a485-e8f397e217b0" class=""><strong>
+But I don’t have the right to be a man! </strong>Everyone has the right to live as the gender that makes them the happiest in terms of roles / expressions in society. There’s no inherent value toward being male, just as there’s no inherent value in being female. The only person who benefits or is harmed by living as a man is you, so <em>please don’t let yourself live as a martyr for society’s sake</em>. We just want you to feel comfortable in your own skin. There’s nothing wrong with that.</p><p id="abaaccec-e783-4944-95a9-dfb3bf8322fe" class=""><strong>
+I don’t know if I want to be a man or if I just don’t want to be a woman! </strong>That’s totally fine. Maybe you might not be sure whether you’re drawn toward masculinity, or if you just want to avoid femininity.
+You don’t have to have all the answers yet. Just guide yourself toward whatever helps you feel more comfortable. If you find yourself feeling alienated by femininity but not necessarily attracted to masculinity, you could be non binary or gender nonconforming. That’s totally okay! This particular page centers the experiences of binary trans men, but you’re valid no matter how you identify. Maybe your answer might even change later as you come to understand yourself a little better.</p><p id="fd947108-31ec-4609-8be5-2107a4930795" class=""><strong>
+This is so stupid! What difference could a game on a website make? </strong>You’re right. We can’t magically alter your body or your memories over the Internet. But that’s not the point. We can’t make you wish you were a man, but we can help you re-discover any pre-existing wish if you have one, and we can give you some advice to help you connect with that wish and nurture it if you want. Your wish to be a man is what matters in the end. Not some silly website game.
+Think about it this way: <em>if you were secure living as your assigned gender, you’d be completely immune to all of this</em>. You’d read this page, laugh, forget about it, and simply move on with your life. But if this sticks in your mind, sit with that feeling a little until you can understand what it’s trying to tell you.</p><p id="0586599e-f481-4bb7-9daa-226cc16693d0" class=""><strong>
+But I’m not sure if I want to be a man or if I’m just envious / jealous! </strong>What’s the difference? If you’re envious or jealous of the way men present themselves, relate to others, or live their lives, that jealousy itself could be trying to tell you something. Take a moment to consider what that might mean for you. It’s common for men who are just starting out to feel jealous of their more confident colleagues and peers. </p><p id="35e2155e-a0c1-477d-b26e-fbef572cf7c3" class=""><strong>
+But I’m not gay / straight / bisexual / asexual / etc! </strong>That’s OK. Your gender and your sexual orientation are completely separate; they have nothing to do with each other. This is probably the hardest part for cis folks to understand: being trans doesn’t mean you’re gay, straight, or anything else. It is somewhat common for folks to repress sexual orientation at the same time as they repress their own gender identity, but we know trans folks who date men, women, nonbinary folks, anybody, or no one at all. It’s all totally fine.</p><p id="5428d4e0-53f4-4cc8-b31f-9788586cf156" class=""><strong>
+But being trans is a trend! </strong>If it is a trend, it’s a very old one. Trans people have existed <a href="https://en.wikipedia.org/wiki/Transgender_history">throughout all times in all cultures</a> but haven’t <a href="https://twitter.com/TransEthics/status/966892044663713793">enjoyed mainstream support and consciousness</a> until very recently. In the 500s, <a href="https://en.wikipedia.org/wiki/Anastasia_the_Patrician">Anastasia the Patrician</a> fled life in the court of Justinian I <a href="https://en.wikipedia.org/wiki/Justinian_I">i</a>n Constantinople to spend twenty-eight years (until death) dressed as a male monk in Egypt, coming to be viewed by some today as a transgender saint. Coptic texts from that era (the fifth to ninth centuries), like texts from around Europe, tell of many female-assigned people transitioning to live as men; in one, a monastic named <a href="https://en.wikipedia.org/wiki/Legend_of_Hilaria">Hilaria</a> (child of Zeno) dresses as a man, brings about a reduction in breast size and cessation of menstruation through asceticism, and comes to be accepted by fellow monks as a male, Hilarion, and by some modern scholars as trans; the story of <a href="https://en.wikipedia.org/wiki/Marina_the_Monk">Marinos (Marina)</a>, another Byzantine, who became a monk in Lebanon, is similar.</p><p id="38ab34e9-ff04-439f-b46e-92b51b7004ef" class=""><strong>
+But I never showed any signs during childhood! </strong>While some men may have known they were men from a very early age, it’s also very common to repress one’s own identity. It’s also extraordinarily common for signs to be present, but hidden until some hindsight well into womanhood. Many men never showed any signs until age 20, 40, 60, or even older. Often some seemingly inconsequential event might bring those repressed feelings forward, and that’s totally okay. If you’re a late bloomer, don’t worry! You’re not any lesser than other men, you’re not an outsider, you’re just at the beginning of your path and there’s nothing wrong with that. The best time to plant a tree would have been twenty years ago, but the second best time is today.</p><p id="4ad3f2be-30c2-40ab-804c-24fdfc596b62" class=""><strong>
+But I don’t want to alter my body! </strong>Then don&#x27;t! Nobody&#x27;s saying you have to. It’s very common for men not to want to change their bodies, especially at first. It’s also common for some of these feelings to change over time. However, being a man has absolutely nothing at all to do with your body -- it’s your desire to be a boy that makes you a boy, nothing more and nothing less.</p><p id="a6b606c7-04ed-4ac9-9c86-5b2291743e4c" class=""><strong>
+It seems nice, but I’m not completely certain I want to be a man! </strong>Nothing is permanent until you make it so; there is always a path back. Lots of us start with baby steps. It&#x27;s okay to try something small, see how it feels, and then step back if it&#x27;s not right for you.
+You’re absolutely valid, even if you don’t quite know what you want yet and even if you choose not to change anything about the way you express yourself. You don’t have to jump in and make huge irreversible changes right away. It’s totally okay to try some small reversible steps. If you later decide that something is not right for you, you can always back out, no matter where you are. As you continue on your path, you’ll begin to form a better idea of what you like and what you don’t.</p><p id="baf29079-1222-402f-add6-b7a0d7c1c086" class=""><strong>
+But I don’t want to lose everything when I come out! </strong>Many men are worried about losing their jobs, their friends, or the support of their family. There is some legitimacy behind this concern: about half of trans people can expect to lose a friend, and about one in four have lost a job due to bias and discrimination. However, most trans men who transition are glad they did and feel much more connected and secure.</p><p id="b9c7750f-20bb-4e58-bf6d-6c97eb2a4c0d" class="">
+<strong>Underscoring all of this is the importance of listening to your own needs.</strong> If you don’t feel safe about telling others, it’s absolutely fine to keep your business to yourself. It’s much easier if you have friends or a supportive partner that can help you process, and you might be surprised by how many people will accept you, but many men get started completely on their own and only come out once they’re confident it’s the right choice for them.</p><p id="87d761ad-9d88-4cba-93e3-d34377912f33" class=""><strong>
+But I still feel weird about this and have no one to talk to! </strong>It’s totally normal to have questions. One of the best ways to understand what life as a man is like is to sit back and listen to many men’s experiences to get as many perspectives as possible.</p><p id="bef66e44-bddb-4f86-8d20-c64eb7469fc2" class="">
+</p></div></article></body></html>
